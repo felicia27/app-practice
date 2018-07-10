@@ -8,18 +8,51 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    //MARK: Properties
+    var txt = "Enter text!"
+    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var greetingTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Handle the text field's user input through delegate callbacks.
+        greetingTextField.delegate = self
+        showText()
+    }
+    
+    func showText() {
+        greetingLabel.text = txt
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
     }
-
-
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        greetingLabel.text = "Hello! " + textField.text!
+    }
+    
+    //MARK: Actions
+    @IBAction func displayTextField(_ sender: UIButton) {
+        
+        txt = "Hello! " + greetingTextField.text!
+        
+        let colors = [UIColor.blue, UIColor.red, UIColor.cyan, UIColor.gray, UIColor.green, UIColor.orange, UIColor.purple, UIColor.yellow]
+        let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
+        self.view.backgroundColor = colors[randomIndex]
+        showText()
+    }
+    
+    
 }
+
 
