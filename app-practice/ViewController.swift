@@ -28,6 +28,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func showText() {
         greetingLabel.text = txt
     }
+    
+    func cleanTextFromTextField(text : String)-> String {
+        if text != "" {
+            return text
+        } else {
+            return " "
+        }
+    }
 
     //MARK: UITextFieldDelegate
     
@@ -47,12 +55,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         txt = "Hello! " + greetingTextField.text!
         
         let colors = [UIColor.blue, UIColor.red, UIColor.cyan, UIColor.gray, UIColor.green, UIColor.orange, UIColor.purple, UIColor.yellow]
+        
         let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
+        
         self.view.backgroundColor = colors[randomIndex]
+        
         showText()
     }
-    
-    
 }
 
 
