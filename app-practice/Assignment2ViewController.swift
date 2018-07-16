@@ -42,6 +42,7 @@ class ViewController2: UIViewController {
             letters.append(Character(String(x).lowercased()))
         }
         let countedSet = NSCountedSet(array: letters)
+        //////////
         var uniques = letters.filter {countedSet.count(for: $0) == 1}
         return (uniques[0])
     }
