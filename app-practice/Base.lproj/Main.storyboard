@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="49" width="275" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHx-6D-Axs">
                                         <rect key="frame" x="0.0" y="87" width="275" height="30"/>
@@ -108,40 +108,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aLC-K9-kfW">
-                                <rect key="frame" x="50" y="256" width="275" height="195.5"/>
+                                <rect key="frame" x="50" y="256" width="275" height="123"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a character and string to delete the character from the string" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqg-23-r6s">
-                                        <rect key="frame" x="3" y="0.0" width="269" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a character" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIV-4O-vzO">
-                                        <rect key="frame" x="85.5" y="41.5" width="104.5" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a character and a string (separated by a space and in that order) to show the delete the character from the word" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIV-4O-vzO">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="47"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMN-rW-XtO">
-                                        <rect key="frame" x="0.0" y="65.5" width="275" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a string" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ys-K2-LnX">
-                                        <rect key="frame" x="97" y="103.5" width="81" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izN-Fe-9Eg">
-                                        <rect key="frame" x="0.0" y="127.5" width="275" height="30"/>
+                                        <rect key="frame" x="0.0" y="55" width="275" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vg-yV-Plh">
-                                        <rect key="frame" x="0.0" y="165.5" width="275" height="30"/>
+                                        <rect key="frame" x="0.0" y="93" width="275" height="30"/>
                                         <state key="normal" title="Go!"/>
                                         <connections>
                                             <action selector="removeButton:" destination="D6L-oL-2XM" eventType="touchUpInside" id="BkY-JB-Ujt"/>
@@ -149,16 +131,14 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="izN-Fe-9Eg" secondAttribute="trailing" id="LBa-1f-c6p"/>
                                     <constraint firstAttribute="trailing" secondItem="6vg-yV-Plh" secondAttribute="trailing" id="LYy-UK-AIY"/>
                                     <constraint firstItem="bMN-rW-XtO" firstAttribute="leading" secondItem="aLC-K9-kfW" secondAttribute="leading" id="T0H-Hp-BMP"/>
-                                    <constraint firstItem="izN-Fe-9Eg" firstAttribute="leading" secondItem="aLC-K9-kfW" secondAttribute="leading" id="mdL-Uh-Qmp"/>
                                     <constraint firstAttribute="trailing" secondItem="bMN-rW-XtO" secondAttribute="trailing" id="qgs-SQ-8xa"/>
                                     <constraint firstItem="6vg-yV-Plh" firstAttribute="leading" secondItem="aLC-K9-kfW" secondAttribute="leading" id="s6u-kc-tIQ"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LjT-vE-WWV">
-                                <rect key="frame" x="50" y="472.5" width="275" height="96.5"/>
+                                <rect key="frame" x="50" y="400" width="275" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a string to reverse it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd8-RK-G5d">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="20.5"/>
@@ -170,7 +150,7 @@
                                         <rect key="frame" x="0.0" y="28.5" width="275" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MC4-Dx-grY">
                                         <rect key="frame" x="0.0" y="66.5" width="275" height="30"/>
@@ -207,11 +187,8 @@
                     <connections>
                         <outlet property="noRepeatLabel" destination="CS1-37-V2b" id="rVo-4b-Ge1"/>
                         <outlet property="noRepeatTextField" destination="ONc-jD-ce1" id="nAv-sO-Zfm"/>
-                        <outlet property="removeCharacterLabel" destination="oIV-4O-vzO" id="TIp-MG-S02"/>
-                        <outlet property="removeCharacterTextField" destination="bMN-rW-XtO" id="DXU-ZO-GhI"/>
-                        <outlet property="removeLabel" destination="fqg-23-r6s" id="l9n-cY-BDb"/>
-                        <outlet property="removeStringLabel" destination="9Ys-K2-LnX" id="lVM-b9-ibN"/>
-                        <outlet property="removeStringTextField" destination="izN-Fe-9Eg" id="7Zg-jt-6Sc"/>
+                        <outlet property="removeLabel" destination="oIV-4O-vzO" id="tU4-IJ-Z0f"/>
+                        <outlet property="removeTextField" destination="bMN-rW-XtO" id="pa4-1E-qWT"/>
                         <outlet property="reverseLabel" destination="rd8-RK-G5d" id="HBl-e2-Crv"/>
                         <outlet property="reverseTextField" destination="dON-lc-Y2y" id="2Ov-yd-vbs"/>
                     </connections>
