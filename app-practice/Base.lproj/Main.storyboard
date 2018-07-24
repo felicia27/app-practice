@@ -341,6 +341,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <segue destination="Kg5-Gy-L9H" kind="show" identifier="add" id="TFs-ce-vLx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APc-Qe-mM9">
                                         <rect key="frame" x="40" y="0.0" width="30" height="60"/>

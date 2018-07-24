@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol mathDelegate: AnyObject {
+@objc protocol mathDelegate {
     @objc optional func add(number1: Int, number2: Int)
    // @objc optional func sub(number1: Int, number2: Int)
    // @objc optional func mul(number1: Int, number2: Int)
@@ -23,7 +23,7 @@ class MathViewController: UIViewController {
 
 
     
-    weak var delegate: mathDelegate?
+    var delegate: mathDelegate?
 
  
     
@@ -45,13 +45,19 @@ class MathViewController: UIViewController {
     //MARK: Actions
     
     @IBAction func calculateButton(_ sender: UIButton) {
-
+        if delegate != nil {
+            if firstNumber.text != "" && secondNumber.text != "" {
+                let number1 = Int(firstNumber.text!)
+                let number2 = Int(secondNumber.text!)
+                delegate?.add!(number1: number1!, number2: number2!)
+                dismiss(animated: true, completion: nil)
+            }
+        }
 
        // if firstNumber.text != ""  && secondNumber.text != "" {
             
             //self.delegate?.add!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)
             //present(UIViewController(), animated: true, completion: nil)
-            dismiss(animated: true, completion: nil)
             // delegate?.div!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)
             // delegate?.mul!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)
             //delegate?.sub!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)

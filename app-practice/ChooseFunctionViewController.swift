@@ -16,13 +16,13 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     //MARK: Properties
     @IBOutlet weak var answerLabel: UILabel!
     
-    weak var delegate: mathDelegate?
+   // weak var delegate: mathDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
-        self.delegate = self
+    //    self.delegate = self
       //  delegate = self
         
 
@@ -36,9 +36,9 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     }
     
     // MARK: Actions
-    @IBAction func additionButton(_ sender: UIButton) {
-        let functionVC = storyboard?.instantiateViewController(withIdentifier: "MathViewController") as! MathViewController
-        present(functionVC, animated: true, completion: nil) }
+  //  @IBAction func additionButton(_ sender: UIButton) {
+//        let functionVC = storyboard?.instantiateViewController(withIdentifier: "MathViewController") as! MathViewController
+//        present(functionVC, animated: true, completion: nil) }
 //       // print("add")
 //        performSegue(withIdentifier: "add", sender: nil)
 //    }
@@ -64,12 +64,13 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-//        if segue.identifier == "add"{
-//            let vc : MathViewController = segue.destination as! MathViewController
-//            vc.delegate = self
+        
+        if segue.identifier == "add"{
+            let vc : MathViewController = segue.destination as! MathViewController
+            vc.delegate = self
 
         }
+    }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     
@@ -78,9 +79,9 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     // MARK:  Delegate Methods from OtherUIViewController
 
     func add(number1: Int, number2: Int){
-        print("hi")
         let sum = number1 + number2
         answerLabel.text = String(sum)
+
         
 //    func sub(number1: Int, number2: Int){
 //        let diff = number1 - number2
