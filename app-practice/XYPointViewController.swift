@@ -8,7 +8,11 @@
 
 import UIKit
 
+
 class XYPointViewController: UIViewController {
+    
+  
+    
     //MARK: Properties
     @IBOutlet weak var XLabel: UILabel!
     @IBOutlet weak var XTextField: UITextField!
@@ -54,19 +58,24 @@ class XYPointViewController: UIViewController {
         let screenSize = UIScreen.main.bounds
         let minScreenWidth = screenSize.minX
         let minScreenHeight = screenSize.minY
-        let maxScreenWidth = screenSize.maxX
-        let maxScreenHeight = screenSize.maxY
+        let maxScreenWidth = screenSize.width
+        let maxScreenHeight = screenSize.height
+        
         point.x = CGFloat(Double(XTextField.text!)!)
         point.y = CGFloat(Double(YTextField.text!)!)
-        if point.x > maxScreenWidth || point.y > maxScreenHeight || point.x < minScreenWidth || point.y < minScreenHeight {
+
+
+         //|| point.x < minScreenWidth || point.y < minScreenHeight
+        if point.x > maxScreenWidth || point.y > maxScreenHeight{
+        
             coordinateLabel.text = "That is out of bounds!"
-        } else {Puppy.center = CGPointFromString("{" + XTextField.text! + "," + YTextField.text! + "}")}
-        var message = "Your coordinate is: " + "(" + XTextField.text!
-        message += ", " + YTextField.text! + ")"
-        coordinateLabel.text = message
+        } else {
+            Puppy.center = CGPointFromString("{" + XTextField.text! + "," + YTextField.text! + "}")
+            var message = "Your coordinate is: " + "(" + XTextField.text!
+            message += ", " + YTextField.text! + ")"
+            coordinateLabel.text = message}
 
     }
-    
-    
+
     
 }
