@@ -18,6 +18,7 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     
     //MARK: Properties
     @IBOutlet weak var answerLabel: UILabel!
+    var myTag: Int = Int()
     
    // weak var delegate: mathDelegate?
     
@@ -44,9 +45,11 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "calculateSegue" {
             let vc : MathViewController = segue.destination as! MathViewController
             vc.delegate = self
-
+            vc.tagNumber = myTag
+        }
     }
     //HOW TO CHOOSE DIFFERENT FUNCTION BASED ON BUTTONS
         // Get the new view controller using segue.destinationViewController.
@@ -54,7 +57,7 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     func add(number1: Int, number2: Int){
         let sum = number1 + number2
         answerLabel.text = String(sum)
-        }
+    }
         
     func sub(number1: Int, number2: Int){
         let diff = number1 - number2
@@ -74,29 +77,8 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     
 
     @IBAction func operationButtons(_ sender: UIButton) {
-        
-        
-        switch sender.tag {
-            
-        case 0:
-           MathViewController().tagNumber = "0"
-            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
-            
-
-        case 1:
-            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
-            MathViewController().tagNumber = "1"
-        case 2:
-            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
-            MathViewController().tagNumber = "2"
-        case 3:
-            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
-            MathViewController().tagNumber = "3"
-
-            
-        default:
-            break
-        }
+        myTag = sender.tag
+        performSegue(withIdentifier: "calculateSegue", sender: nil)
     }
     
 

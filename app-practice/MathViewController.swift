@@ -8,6 +8,8 @@
 
 import UIKit
 
+//CLEAN CODE
+//FIX STORYBOARD(make more user friendly/menu screen)
 protocol mathDelegate {
     func add(number1: Int, number2: Int)
     func sub(number1: Int, number2: Int)
@@ -24,7 +26,7 @@ class MathViewController: UIViewController {
     
     
     var delegate: mathDelegate?
-    var tagNumber: String = ""
+    var tagNumber: Int = Int()
  
     
 
@@ -44,24 +46,20 @@ class MathViewController: UIViewController {
                 let number1 = Int(firstNumber.text!)
                 let number2 = Int(secondNumber.text!)
             
-            if tagNumber == "0" {
+            if tagNumber == 0 {
                 self.delegate?.add(number1: number1!, number2: number2!)
-                self.navigationController?.popViewController(animated: true)
     
             }
-            else if tagNumber == "1" {
+            else if tagNumber == 1 {
                 self.delegate?.mul(number1: number1!, number2: number2!)
-                self.navigationController?.popViewController(animated: true)
                 }
-            else if tagNumber == "2" {
+            else if tagNumber == 2 {
                 self.delegate?.sub(number1: number1!, number2: number2!)
-                self.navigationController?.popViewController(animated: true)
                 }
-            else if tagNumber == "3" {
+            else if tagNumber == 3 {
                 self.delegate?.div(number1: number1!, number2: number2!)
-                self.navigationController?.popViewController(animated: true)
                 }
-
+                self.navigationController?.popViewController(animated: true)
     }
         }
 
