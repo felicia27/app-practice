@@ -12,6 +12,9 @@ import UIKit
 
 
 class ChooseFunctionViewController: UIViewController, mathDelegate{
+ 
+
+
     
     //MARK: Properties
     @IBOutlet weak var answerLabel: UILabel!
@@ -20,6 +23,7 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
 
     //    self.delegate = self
@@ -35,70 +39,66 @@ class ChooseFunctionViewController: UIViewController, mathDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Actions
-  //  @IBAction func additionButton(_ sender: UIButton) {
-//        let functionVC = storyboard?.instantiateViewController(withIdentifier: "MathViewController") as! MathViewController
-//        present(functionVC, animated: true, completion: nil) }
-//       // print("add")
-//        performSegue(withIdentifier: "add", sender: nil)
-//    }
-//
-//    @IBAction func multiplicationButton(_ sender: UIButton) {
-//        
-//       // print("mul")
-//        performSegue(withIdentifier: "mul", sender: nil)
-//    }
-//    
-//    @IBAction func subtractionButton(_ sender: UIButton) {
-//        
-//       // print("sub")
-//        performSegue(withIdentifier: "sub", sender: nil)
-//    }
-//    
-//    @IBAction func divisionButton(_ sender: UIButton) {
-//        
-//       // print("div")
-//        performSegue(withIdentifier: "div", sender: nil)
-//    }
+
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "add"{
             let vc : MathViewController = segue.destination as! MathViewController
             vc.delegate = self
 
-        }
     }
+    //HOW TO CHOOSE DIFFERENT FUNCTION BASED ON BUTTONS
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    
-    
-
-    // MARK:  Delegate Methods from OtherUIViewController
-
     func add(number1: Int, number2: Int){
         let sum = number1 + number2
         answerLabel.text = String(sum)
-
+        }
         
-//    func sub(number1: Int, number2: Int){
-//        let diff = number1 - number2
-//        answerLabel.text = String(diff)
-//    }
-//
-//    func mul(number1: Int, number2: Int){
-//        let product = number1 * number2
-//        answerLabel.text = String(product)
-//    }
-//
-//    func div(number1: Int, number2: Int){
-//        let quotient = number1 / number2
-//        answerLabel.text = String(quotient)
-//    }
+    func sub(number1: Int, number2: Int){
+        let diff = number1 - number2
+        answerLabel.text = String(diff)
+        }
+        
+    func mul(number1: Int, number2: Int){
+        let product = number1 * number2
+        answerLabel.text = String(product)
+        }
+        
+    func div(number1: Int, number2: Int){
+        let quotient = number1 / number2
+        //account for case of dividing with 0
+        answerLabel.text = String(quotient)
+        }
+    
 
-}
+    @IBAction func operationButtons(_ sender: UIButton) {
+        
+        
+        switch sender.tag {
+            
+        case 0:
+           MathViewController().tagNumber = "0"
+            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
+            
+
+        case 1:
+            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
+            MathViewController().tagNumber = "1"
+        case 2:
+            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
+            MathViewController().tagNumber = "2"
+        case 3:
+            performSegue(withIdentifier: "calculateSegue", sender: sender.tag)
+            MathViewController().tagNumber = "3"
+
+            
+        default:
+            break
+        }
+    }
+    
 
     
 }

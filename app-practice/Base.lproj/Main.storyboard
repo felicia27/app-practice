@@ -298,7 +298,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="n09-BT-sUg" kind="show" id="yAp-sr-MDv"/>
+                                    <segue destination="n09-BT-sUg" kind="show" id="EAL-37-02O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -342,31 +342,31 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="+"/>
                                         <connections>
-                                            <segue destination="Kg5-Gy-L9H" kind="show" identifier="add" id="TFs-ce-vLx"/>
+                                            <action selector="operationButtons:" destination="n09-BT-sUg" eventType="touchUpInside" id="4Uu-1k-CO4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APc-Qe-mM9">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APc-Qe-mM9">
                                         <rect key="frame" x="40" y="0.0" width="30" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="x"/>
                                         <connections>
-                                            <action selector="multiplicationButton:" destination="n09-BT-sUg" eventType="touchUpInside" id="FQA-Jv-5qA"/>
+                                            <action selector="operationButtons:" destination="n09-BT-sUg" eventType="touchUpInside" id="9oP-Pd-GZY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXa-ct-MCZ">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXa-ct-MCZ">
                                         <rect key="frame" x="80" y="0.0" width="30" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="-"/>
                                         <connections>
-                                            <action selector="subtractionButton:" destination="n09-BT-sUg" eventType="touchUpInside" id="Etc-wt-s1Z"/>
+                                            <action selector="operationButtons:" destination="n09-BT-sUg" eventType="touchUpInside" id="4ki-Hv-QES"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksu-gb-dcQ">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksu-gb-dcQ">
                                         <rect key="frame" x="120" y="0.0" width="30" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="÷"/>
                                         <connections>
-                                            <action selector="divisionButton:" destination="n09-BT-sUg" eventType="touchUpInside" id="vLo-7w-mSv"/>
+                                            <action selector="operationButtons:" destination="n09-BT-sUg" eventType="touchUpInside" id="pQr-nI-n9t"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -398,11 +398,12 @@
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="S18-tH-Fri" id="nQv-fO-VnJ"/>
+                        <segue destination="Kg5-Gy-L9H" kind="show" identifier="calculateSegue" id="ed2-s7-2Sa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYT-mr-Zec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3260" y="8"/>
+            <point key="canvasLocation" x="3310" y="32"/>
         </scene>
         <!--Math View Controller-->
         <scene sceneID="qnN-Ls-if4">
@@ -417,7 +418,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Calculate!"/>
                                 <connections>
-                                    <action selector="calculateButton:" destination="cWe-Px-My3" eventType="touchUpInside" id="4ZT-vy-KvC"/>
+                                    <action selector="calculateButton:" destination="Kg5-Gy-L9H" eventType="touchUpInside" id="ils-uO-n8i"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J8y-61-ltu">
@@ -450,7 +451,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcL-mQ-Cu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="cWe-Px-My3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4008.8000000000002" y="31.934032983508249"/>
         </scene>
@@ -474,6 +474,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="puppy.jpg" width="450" height="462"/>
+        <image name="puppy.jpg" width="225" height="231"/>
     </resources>
 </document>

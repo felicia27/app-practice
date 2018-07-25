@@ -8,11 +8,11 @@
 
 import UIKit
 
-@objc protocol mathDelegate {
-    @objc optional func add(number1: Int, number2: Int)
-   // @objc optional func sub(number1: Int, number2: Int)
-   // @objc optional func mul(number1: Int, number2: Int)
-    //@objc optional func div(number1: Int, number2: Int)
+protocol mathDelegate {
+    func add(number1: Int, number2: Int)
+    func sub(number1: Int, number2: Int)
+    func mul(number1: Int, number2: Int)
+    func div(number1: Int, number2: Int)
 }
 
 class MathViewController: UIViewController {
@@ -21,63 +21,57 @@ class MathViewController: UIViewController {
     @IBOutlet weak var firstNumber: UITextField!
     @IBOutlet weak var secondNumber: UITextField!
 
-
+    
     
     var delegate: mathDelegate?
-
+    var tagNumber: String = ""
  
     
 
     override func viewDidLoad(){
         super.viewDidLoad()
         
-        
-
-       // ChooseFunctionViewController.delegate = self
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK: Actions
-    
     @IBAction func calculateButton(_ sender: UIButton) {
-        if delegate != nil {
+        if self.delegate != nil { //MOVE THIS IF STATEMENT TO VIEWDIDLOAD()
             if firstNumber.text != "" && secondNumber.text != "" {
                 let number1 = Int(firstNumber.text!)
                 let number2 = Int(secondNumber.text!)
-                delegate?.add!(number1: number1!, number2: number2!)
-                dismiss(animated: true, completion: nil)
+            
+            if tagNumber == "0" {
+                self.delegate?.add(number1: number1!, number2: number2!)
+                self.navigationController?.popViewController(animated: true)
+    
             }
+            else if tagNumber == "1" {
+                self.delegate?.mul(number1: number1!, number2: number2!)
+                self.navigationController?.popViewController(animated: true)
+                }
+            else if tagNumber == "2" {
+                self.delegate?.sub(number1: number1!, number2: number2!)
+                self.navigationController?.popViewController(animated: true)
+                }
+            else if tagNumber == "3" {
+                self.delegate?.div(number1: number1!, number2: number2!)
+                self.navigationController?.popViewController(animated: true)
+                }
+
+    }
         }
 
-       // if firstNumber.text != ""  && secondNumber.text != "" {
             
-            //self.delegate?.add!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)
-            //present(UIViewController(), animated: true, completion: nil)
-            // delegate?.div!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)
-            // delegate?.mul!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)
-            //delegate?.sub!(number1: Int(firstNumber.text!)!, number2: Int(secondNumber.text!)!)
-            
-            
-          //  self.navigationController?.popViewController(animated: true)
-      //  }
+        
+
         
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+    
+
+
+
