@@ -8,8 +8,6 @@
 
 import UIKit
 
-//CLEAN CODE
-//FIX STORYBOARD(make more user friendly/menu screen)
 protocol mathDelegate {
     func add(number1: Int, number2: Int)
     func sub(number1: Int, number2: Int)
@@ -20,19 +18,15 @@ protocol mathDelegate {
 class MathViewController: UIViewController {
     
     //MARK: Properties
+    
     @IBOutlet weak var firstNumber: UITextField!
     @IBOutlet weak var secondNumber: UITextField!
-
-    
     
     var delegate: mathDelegate?
     var tagNumber: Int = Int()
- 
-    
 
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,8 +42,7 @@ class MathViewController: UIViewController {
             
             if tagNumber == 0 {
                 self.delegate?.add(number1: number1!, number2: number2!)
-    
-            }
+                }
             else if tagNumber == 1 {
                 self.delegate?.mul(number1: number1!, number2: number2!)
                 }
@@ -59,14 +52,9 @@ class MathViewController: UIViewController {
             else if tagNumber == 3 {
                 self.delegate?.div(number1: number1!, number2: number2!)
                 }
-                self.navigationController?.popViewController(animated: true)
-    }
+            self.navigationController?.popViewController(animated: true)
+            }
         }
-
-            
-        
-
-        
     }
 }
     

@@ -8,12 +8,11 @@
 
 import UIKit
 
-
 class XYPointViewController: UIViewController {
     
-  
     
     //MARK: Properties
+    
     @IBOutlet weak var XLabel: UILabel!
     @IBOutlet weak var XTextField: UITextField!
     @IBOutlet weak var YLabel: UILabel!
@@ -25,19 +24,10 @@ class XYPointViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-    
-        
-
-        // Do any additional setup after loading the view.
-        
-
     }
-    //FIGURE OUT HOW TO MOVE PUPPY PICTuRE BASED ON COORDINATES
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     class XYPoint {
@@ -53,29 +43,23 @@ class XYPointViewController: UIViewController {
 
     
     //MARK: Actions
+    
     @IBAction func coordinateButton(_ sender: UIButton) {
         let point = XYPoint(x: 0.0, y: 0.0)
         let screenSize = UIScreen.main.bounds
-        let minScreenWidth = screenSize.minX
-        let minScreenHeight = screenSize.minY
         let maxScreenWidth = screenSize.width
         let maxScreenHeight = screenSize.height
         
         point.x = CGFloat(Double(XTextField.text!)!)
         point.y = CGFloat(Double(YTextField.text!)!)
 
-
-         //|| point.x < minScreenWidth || point.y < minScreenHeight
         if point.x > maxScreenWidth || point.y > maxScreenHeight{
-        
             coordinateLabel.text = "That is out of bounds!"
         } else {
             Puppy.center = CGPointFromString("{" + XTextField.text! + "," + YTextField.text! + "}")
             var message = "Your coordinate is: " + "(" + XTextField.text!
             message += ", " + YTextField.text! + ")"
-            coordinateLabel.text = message}
-
+            coordinateLabel.text = message
+        }
     }
-
-    
 }

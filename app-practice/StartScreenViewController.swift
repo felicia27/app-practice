@@ -11,26 +11,23 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
+    
     var txt = "Enter text!"
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var greetingTextField: UITextField!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Handle the text field's user input through delegate callbacks.
         greetingTextField.delegate = self
         showText()
         outputDict()
-
     }
     
     func showText() {
         greetingLabel.text = txt
     }
     
-    func cleanTextFromTextField(text : String)-> String {
+    func cleanTextFromTextField(text : String) -> String {
         if text != "" {
             return text
         } else {
@@ -100,7 +97,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard.
         textField.resignFirstResponder()
         return true
     }
@@ -110,6 +106,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Actions
+    
     @IBAction func displayTextField(_ sender: UIButton) {
         
         txt = "Hello! " + greetingTextField.text!

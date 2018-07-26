@@ -11,6 +11,7 @@ import UIKit
 class ViewController2: UIViewController {
 
     //MARK: Properties
+    
     @IBOutlet weak var noRepeatLabel: UILabel!
     @IBOutlet weak var noRepeatTextField: UITextField!
     @IBOutlet weak var removeLabel: UILabel!
@@ -26,13 +27,10 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func noRepeats(text :String) -> Character {
@@ -42,8 +40,8 @@ class ViewController2: UIViewController {
             letters.append(Character(String(x).lowercased()))
         }
         let countedSet = NSCountedSet(array: letters)
-        //////////
         var uniques = letters.filter {countedSet.count(for: $0) == 1}
+        
         return (uniques[0])
     }
     
@@ -66,14 +64,12 @@ class ViewController2: UIViewController {
             let char = "\(character)"
             reverse = char + reverse
         }
-        
         return(reverse)
     }
     
  
-
-    
     //MARK: Actions
+    
     @IBAction func noRepeatButton(_ sender: UIButton) {
         if noRepeatTextField.text == "" {
             noRepeatLabel.text = "Please enter a valid string!"
@@ -84,9 +80,10 @@ class ViewController2: UIViewController {
     }
     
     @IBAction func removeButton(_ sender: UIButton) {
-        if removeCharacterTextField.text! == "" || removeStringTextField.text! == "" || (removeCharacterTextField.text?.count)! > 1
-        { removeLabel.text = "Please enter a valid character(only one) and string!"
-        } else {let removedWord = removeCharacter(letter: removeCharacterTextField.text!, text: removeStringTextField.text!)
+        if removeCharacterTextField.text! == "" || removeStringTextField.text! == "" || (removeCharacterTextField.text?.count)! > 1 {
+            removeLabel.text = "Please enter a valid character(only one) and string!"
+        } else {
+            let removedWord = removeCharacter(letter: removeCharacterTextField.text!, text: removeStringTextField.text!)
             removeLabel.text = String(removedWord)
         }
     }
@@ -94,7 +91,8 @@ class ViewController2: UIViewController {
     @IBAction func reverseButton(_ sender: UIButton) {
         if reverseTextField.text == "" {
             reverseLabel.text = "Please enter a valid string!"
-        } else {let reverseWord = reverse(text: reverseTextField.text!)
+        } else {
+            let reverseWord = reverse(text: reverseTextField.text!)
             reverseLabel.text = String(reverseWord)
         }
     }
