@@ -177,7 +177,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aLC-K9-kfW">
-                                <rect key="frame" x="50" y="256" width="275" height="123"/>
+                                <rect key="frame" x="50" y="256" width="275" height="133.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a character and string to delete the character from the string" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqg-23-r6s">
                                         <rect key="frame" x="3" y="0.0" width="269" height="33.5"/>
@@ -192,13 +192,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMN-rW-XtO">
-                                        <rect key="frame" x="0.0" y="55" width="275" height="30"/>
+                                        <rect key="frame" x="0.0" y="65.5" width="275" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vg-yV-Plh">
-                                        <rect key="frame" x="0.0" y="165.5" width="275" height="30"/>
+                                        <rect key="frame" x="0.0" y="103.5" width="275" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Go!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,7 +216,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LjT-vE-WWV">
-                                <rect key="frame" x="50" y="400" width="275" height="96.5"/>
+                                <rect key="frame" x="50" y="410.5" width="275" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a string to reverse it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd8-RK-G5d">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="20.5"/>
@@ -513,6 +513,7 @@
                     <navigationItem key="navigationItem" id="1Qf-hv-bG0"/>
                     <connections>
                         <outlet property="firstNumber" destination="J8y-61-ltu" id="EjK-YO-05R"/>
+                        <outlet property="instructionLabel" destination="EfG-H9-r47" id="QPn-28-N72"/>
                         <outlet property="secondNumber" destination="keO-v9-55x" id="TPO-rb-ERo"/>
                     </connections>
                 </viewController>

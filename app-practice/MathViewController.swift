@@ -21,6 +21,7 @@ class MathViewController: UIViewController {
     
     @IBOutlet weak var firstNumber: UITextField!
     @IBOutlet weak var secondNumber: UITextField!
+    @IBOutlet weak var instructionLabel: UILabel!
     
     var delegate: mathDelegate?
     var tagNumber: Int = Int()
@@ -43,21 +44,22 @@ class MathViewController: UIViewController {
             switch tagNumber {
                 case 0:
                     self.delegate?.add(number1: number1!, number2: number2!)
-                    break
+                break
                 
                 case 1:
                     self.delegate?.mul(number1: number1!, number2: number2!)
-                    break
+                break
                 
                 case 2:
                     self.delegate?.sub(number1: number1!, number2: number2!)
-                    break
+                break
                 
                 case 3:
                     self.delegate?.div(number1: number1!, number2: number2!)
-                    break
+                break
                 
                 default:
+                    instructionLabel.text = "That button is not supported, please try again."
                     break
                 }
            
