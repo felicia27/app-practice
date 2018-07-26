@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if text != "" {
             return text
         } else {
-            return " "
+            return ""
         }
     }
     
