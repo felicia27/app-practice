@@ -43,15 +43,19 @@ class MathViewController: UIViewController {
             switch tagNumber {
                 case 0:
                     self.delegate?.add(number1: number1!, number2: number2!)
+                    break
                 
                 case 1:
                     self.delegate?.mul(number1: number1!, number2: number2!)
+                    break
                 
                 case 2:
                     self.delegate?.sub(number1: number1!, number2: number2!)
+                    break
                 
                 case 3:
                     self.delegate?.div(number1: number1!, number2: number2!)
+                    break
                 
                 default:
                     break
