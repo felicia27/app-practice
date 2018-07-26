@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F36F465E20F6742500955A69 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F465D20F6742500955A69 /* ViewController2.swift */; };
+		F3199DD321014A9B004A2BD9 /* MathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3199DD221014A9B004A2BD9 /* MathViewController.swift */; };
+		F3199DD521014B39004A2BD9 /* ChooseFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3199DD421014B39004A2BD9 /* ChooseFunctionViewController.swift */; };
+		F36F465E20F6742500955A69 /* Assignment2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F465D20F6742500955A69 /* Assignment2ViewController.swift */; };
 		F3AC2CBC20F52C00002C2B8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC2CBB20F52C00002C2B8E /* AppDelegate.swift */; };
-		F3AC2CBE20F52C00002C2B8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC2CBD20F52C00002C2B8E /* ViewController.swift */; };
+		F3AC2CBE20F52C00002C2B8E /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC2CBD20F52C00002C2B8E /* StartScreenViewController.swift */; };
 		F3AC2CC120F52C00002C2B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AC2CBF20F52C00002C2B8E /* Main.storyboard */; };
 		F3AC2CC320F52C01002C2B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AC2CC220F52C01002C2B8E /* Assets.xcassets */; };
 		F3AC2CC620F52C01002C2B8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AC2CC420F52C01002C2B8E /* LaunchScreen.storyboard */; };
 		F3AC2CD120F52C01002C2B8E /* app_practiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AC2CD020F52C01002C2B8E /* app_practiceTests.swift */; };
+		F3F8C51820FE691A00EEB758 /* XYPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F8C51720FE691A00EEB758 /* XYPointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F36F465D20F6742500955A69 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		F3199DD221014A9B004A2BD9 /* MathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathViewController.swift; sourceTree = "<group>"; };
+		F3199DD421014B39004A2BD9 /* ChooseFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFunctionViewController.swift; sourceTree = "<group>"; };
+		F36F465D20F6742500955A69 /* Assignment2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment2ViewController.swift; sourceTree = "<group>"; };
 		F3AC2CB820F52C00002C2B8E /* app-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AC2CBB20F52C00002C2B8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3AC2CBD20F52C00002C2B8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3AC2CBD20F52C00002C2B8E /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		F3AC2CC020F52C00002C2B8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3AC2CC220F52C01002C2B8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3AC2CC520F52C01002C2B8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		F3AC2CCC20F52C01002C2B8E /* app-practiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "app-practiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AC2CD020F52C01002C2B8E /* app_practiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_practiceTests.swift; sourceTree = "<group>"; };
 		F3AC2CD220F52C01002C2B8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F8C51720FE691A00EEB758 /* XYPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				F3AC2CBB20F52C00002C2B8E /* AppDelegate.swift */,
-				F3AC2CBD20F52C00002C2B8E /* ViewController.swift */,
-				F36F465D20F6742500955A69 /* ViewController2.swift */,
+				F3AC2CBD20F52C00002C2B8E /* StartScreenViewController.swift */,
+				F36F465D20F6742500955A69 /* Assignment2ViewController.swift */,
+				F3F8C51720FE691A00EEB758 /* XYPointViewController.swift */,
+				F3199DD421014B39004A2BD9 /* ChooseFunctionViewController.swift */,
+				F3199DD221014A9B004A2BD9 /* MathViewController.swift */,
 				F3AC2CBF20F52C00002C2B8E /* Main.storyboard */,
 				F3AC2CC220F52C01002C2B8E /* Assets.xcassets */,
 				F3AC2CC420F52C01002C2B8E /* LaunchScreen.storyboard */,
@@ -200,9 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3AC2CBE20F52C00002C2B8E /* ViewController.swift in Sources */,
+				F3F8C51820FE691A00EEB758 /* XYPointViewController.swift in Sources */,
+				F3AC2CBE20F52C00002C2B8E /* StartScreenViewController.swift in Sources */,
 				F3AC2CBC20F52C00002C2B8E /* AppDelegate.swift in Sources */,
-				F36F465E20F6742500955A69 /* ViewController2.swift in Sources */,
+				F3199DD321014A9B004A2BD9 /* MathViewController.swift in Sources */,
+				F36F465E20F6742500955A69 /* Assignment2ViewController.swift in Sources */,
+				F3199DD521014B39004A2BD9 /* ChooseFunctionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
